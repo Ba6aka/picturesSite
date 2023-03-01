@@ -81,7 +81,18 @@ function modal (triggerSelector, windowSelector, closeSelector, clickOverlayModa
         
     }
 
-    showModalByTime('.popup-consultation', 5000);
+    function showModalWindowByScroll(){
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1){
+            document.querySelector('.popup-gift').style.display = 'block';
+            document.body.overflow = 'hidden';
+            window.removeEventListener('scroll', showModalWindowByScroll);
+            removeElement('.fixed-gift');
+        }
+    }
+    
+    window.addEventListener('scroll', showModalWindowByScroll);
+    
+    // showModalByTime('.popup-consultation', 5000);
 }
 
 export {modal};
