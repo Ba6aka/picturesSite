@@ -1,4 +1,5 @@
 import { modal } from "./modules/modal";
+import { slider } from "./modules/slider";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -6,4 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
     modal('.button-design', '.popup-design', '.popup-close');
     modal('.button-consultation', '.popup-consultation', '.popup-close');
     modal('.fixed-gift', '.popup-gift', '.popup-close', true, true);
+    slider({
+        sliderItemsSelector: '.feedback-slider-item',
+        prevSelector: '.main-prev-btn',
+        nextSelector: '.main-next-btn',
+    });
+    slider({
+        sliderItemsSelector: '.main-slider-item',
+        dir: 'vertical'
+    });
 });

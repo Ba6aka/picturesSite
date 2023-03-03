@@ -1,4 +1,5 @@
-import { removeElement } from "./removeElem";
+let btnPress;
+
 function modal (triggerSelector, windowSelector, closeSelector, clickOverlayModal = true, del = false ){
     
     const trigger = document.querySelectorAll(triggerSelector),
@@ -6,7 +7,9 @@ function modal (triggerSelector, windowSelector, closeSelector, clickOverlayModa
     modalWindow = document.querySelector(windowSelector),
     close = document.querySelectorAll(closeSelector),
     scrol = calcScroll();
-   
+  
+
+    
   function closeModalWindows(){
       windows.forEach((item) =>{
           item.style.display = 'none';
@@ -15,15 +18,17 @@ function modal (triggerSelector, windowSelector, closeSelector, clickOverlayModa
 
   trigger.forEach((item) =>{
       item.addEventListener('click', (e) =>{
+        
         if (e.target){
             e.preventDefault(); }
               closeModalWindows();
-        if (del){
-            removeElement(triggerSelector);
-            }
+
+
         modalWindow.style.display = 'block ';
         document.body.style.overflow = 'hidden';
         document.body.style.marginRight = `${scrol}px`;
+        btnPress = true;
+
       });
   });
 
@@ -80,18 +85,18 @@ function modal (triggerSelector, windowSelector, closeSelector, clickOverlayModa
         }, time);
         
     }
-
+   
     function showModalWindowByScroll(){
-        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1){
+        if (!btnPress && window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1 ){
             document.querySelector('.popup-gift').style.display = 'block';
             document.body.overflow = 'hidden';
             window.removeEventListener('scroll', showModalWindowByScroll);
-            removeElement('.fixed-gift');
+       
         }
     }
-    
+
     window.addEventListener('scroll', showModalWindowByScroll);
-    
+
     // showModalByTime('.popup-consultation', 5000);
 }
 
