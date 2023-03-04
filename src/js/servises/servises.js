@@ -1,6 +1,5 @@
 
-const postData = async (url, data, selectorModalWindow ,loadMessage) =>{
-    document.querySelector(selectorModalWindow).textContent = loadMessage;
+const postData = async (url, data) =>{
     const res =  await fetch(url, {
         method:'Post',
         body:data,
