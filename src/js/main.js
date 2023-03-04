@@ -1,6 +1,6 @@
 import { modal } from "./modules/modal";
 import { slider } from "./modules/slider";
-
+import { forms } from "./modules/forms";
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
 
@@ -16,4 +16,5 @@ window.addEventListener('DOMContentLoaded', () => {
         sliderItemsSelector: '.main-slider-item',
         dir: 'vertical'
     });
+    forms();
 });
