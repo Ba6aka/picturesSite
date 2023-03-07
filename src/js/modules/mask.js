@@ -13,7 +13,7 @@ const Mask = (selector) =>{
         }
     };
 
-    function phonemask(event){
+    function phoneMask(event){
         let matrix = '+38 (___) ___ __ __',
             def = matrix.replace(/\D/g, ''),
             val = this.value.replace(/\D/g, ''),
@@ -32,7 +32,7 @@ const Mask = (selector) =>{
         if (event.type == 'blur'){
             if (this.value.length == 2){
                 this.value = '';
-                console.log(this.value)
+                console.log(this.value);
             } else {
                 setCursorPosition(this.value.length, this);
             }
@@ -42,9 +42,9 @@ const Mask = (selector) =>{
     const inputs = document.querySelectorAll(selector);
 
     inputs.forEach((input) =>{
-        input.addEventListener('input', phonemask);
-        input.addEventListener('blur', phonemask);
-        input.addEventListener('focus', phonemask);
+        input.addEventListener('input', phoneMask);
+        input.addEventListener('blur', phoneMask)
+        input.addEventListener('focus', phoneMask);
     });
 
 };
