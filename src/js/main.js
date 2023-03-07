@@ -2,6 +2,8 @@ import { modal } from "./modules/modal";
 import { slider } from "./modules/slider";
 import { forms } from "./modules/forms";
 import { Mask } from "./modules/mask";
+import { checkLanguageInputs } from "./modules/checkLanguageInputs";
+
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
 
@@ -18,5 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         dir: 'vertical'
     });
     forms();
-    Mask('[name="phone"]')
+    Mask('[name="phone"]');
+    checkLanguageInputs('[name="name"]');
+    checkLanguageInputs('[name="message"]');
 });
