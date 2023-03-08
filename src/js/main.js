@@ -3,6 +3,7 @@ import { slider } from "./modules/slider";
 import { forms } from "./modules/forms";
 import { Mask } from "./modules/mask";
 import { checkLanguageInputs } from "./modules/checkLanguageInputs";
+import { showStyles } from "./modules/showStyles";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -23,4 +24,5 @@ window.addEventListener('DOMContentLoaded', () => {
     Mask('[name="phone"]');
     checkLanguageInputs('[name="name"]');
     checkLanguageInputs('[name="message"]');
+    showStyles('.styles-2', '.button-styles');
 });
