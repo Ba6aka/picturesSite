@@ -24,5 +24,5 @@ window.addEventListener('DOMContentLoaded', () => {
     Mask('[name="phone"]');
     checkLanguageInputs('[name="name"]');
     checkLanguageInputs('[name="message"]');
-    showStyles('.styles-2', '.button-styles');
+    showStyles('[data-row]', '.button-styles');
 });
