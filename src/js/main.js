@@ -4,6 +4,7 @@ import { forms } from "./modules/forms";
 import { Mask } from "./modules/mask";
 import { checkLanguageInputs } from "./modules/checkLanguageInputs";
 import { showStyles } from "./modules/showStyles";
+import { calculator } from "./modules/calculator";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -25,4 +26,5 @@ window.addEventListener('DOMContentLoaded', () => {
     checkLanguageInputs('[name="name"]');
     checkLanguageInputs('[name="message"]');
     showStyles('[data-row]', '.button-styles');
+    calculator('#size', '#material', '#options', '.promocode', '.calc-price');
 });
