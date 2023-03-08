@@ -31,7 +31,7 @@ const forms = () =>{
             let dots;
             let filesName = imageInput.files[0].name.split('.');
             filesName[0].length > 5 ? dots = '...' : dots = '.';
-            console.log(filesName[0].length)
+            console.log(filesName[0].length);
             imageInput.previousElementSibling.textContent = filesName[0].substring(0, 6) + dots + filesName[1];
         });
     });
@@ -39,6 +39,7 @@ const forms = () =>{
     form.forEach((item)=>{
         item.addEventListener('submit', (e) =>{
             e.preventDefault();
+            
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
             item.parentNode.appendChild(statusMessage);
@@ -85,7 +86,7 @@ const forms = () =>{
                     textMessage.remove();
                     upload.forEach((item) =>{
                         console.log(item);
-                        console.log('something')
+                        console.log('something');
                         item.previousElementSibling.textContent = 'file not selected';
                     });
                 }, 5000);
@@ -96,6 +97,6 @@ const forms = () =>{
         });
     });
    
-}
+};
 
 export {forms};
