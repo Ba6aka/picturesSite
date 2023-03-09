@@ -5,6 +5,7 @@ import { Mask } from "./modules/mask";
 import { checkLanguageInputs } from "./modules/checkLanguageInputs";
 import { showStyles } from "./modules/showStyles";
 import { calculator } from "./modules/calculator";
+import { filter } from "./modules/filter";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -27,4 +28,5 @@ window.addEventListener('DOMContentLoaded', () => {
     checkLanguageInputs('[name="message"]');
     showStyles('[data-row]', '.button-styles');
     calculator('#size', '#material', '#options', '.promocode', '.calc-price');
+    filter();
 });
