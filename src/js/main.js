@@ -6,6 +6,9 @@ import { checkLanguageInputs } from "./modules/checkLanguageInputs";
 import { showStyles } from "./modules/showStyles";
 import { calculator } from "./modules/calculator";
 import { filter } from "./modules/filter";
+import  { pictureSize } from "./modules/pictureSize";
+import { collapsible } from "./modules/collapsible ";
+import { burger } from "./modules/burger";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -29,4 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showStyles('[data-row]', '.button-styles');
     calculator('#size', '#material', '#options', '.promocode', '.calc-price');
     filter();
+    pictureSize('.sizes-block');
+    collapsible('.accordion-heading');
+    burger('.burger', '.burger-menu');
 });
