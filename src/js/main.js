@@ -9,6 +9,7 @@ import { filter } from "./modules/filter";
 import  { pictureSize } from "./modules/pictureSize";
 import { collapsible } from "./modules/collapsible ";
 import { burger } from "./modules/burger";
+import { scrolling } from "./modules/scroling";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -35,4 +36,5 @@ window.addEventListener('DOMContentLoaded', () => {
     pictureSize('.sizes-block');
     collapsible('.accordion-heading');
     burger('.burger', '.burger-menu');
+    scrolling('.pageup');
 });
