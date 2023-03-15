@@ -10,6 +10,7 @@ import  { pictureSize } from "./modules/pictureSize";
 import { collapsible } from "./modules/collapsible ";
 import { burger } from "./modules/burger";
 import { scrolling } from "./modules/scroling";
+import { drop } from "./modules/drag&drops";
 
 window.addEventListener('DOMContentLoaded', () => {
     "Use strict";
@@ -37,4 +38,5 @@ window.addEventListener('DOMContentLoaded', () => {
     collapsible('.accordion-heading');
     burger('.burger', '.burger-menu');
     scrolling('.pageup');
+    drop();
 });
